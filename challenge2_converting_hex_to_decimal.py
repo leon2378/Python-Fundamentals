@@ -7,4 +7,22 @@ hexNumbers = {
 # Converts a string hexadecimal number into an integer decimal
 # If hexNum is not a valid hexadecimal number, returns None
 def hexToDec(hexNum):
-    pass
+    # Initialize the decimal value to 0
+    decimal = 0
+    # Convert the input to uppercase to handle lowercase letters
+    hexNum = hexNum.upper()
+    
+    for char in hexNum:
+        if char in hexNumbers:
+            # Multiply the current total by 16 and add the value of the current hex digit
+            decimal = decimal * 16 + hexNumbers[char]
+        else:
+            # If an invalid character is found, return None
+            return None
+    return decimal
+
+# Example usage:
+print(hexToDec("1A3"))    # Output: 419
+print(hexToDec("FF"))     # Output: 255
+print(hexToDec("G1"))     # Output: None (invalid character 'G')
+print(hexToDec("abcd"))   # Output: 43981
