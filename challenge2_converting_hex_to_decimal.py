@@ -37,4 +37,10 @@ def hexToDec(hexNum):
             return None
         
     if len(hexNum) == 3:
-        return hexNumbers(hexNum[0], 256
+        return hexNumbers[hexNum[0]] * 256 + hexNumbers[hexNum[1]] * 16 + hexNumbers[hexNum[2]]
+    
+    if len(hexNum) == 2:
+        return hexNumbers[hexNum[0]] * 16 + hexNumbers[hexNum[1]]
+
+    if len(hexNum) == 1:
+        return hexNumbers[hexNum[0]] 
