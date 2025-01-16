@@ -26,3 +26,15 @@ print(hexToDec("1A3"))    # Output: 419
 print(hexToDec("FF"))     # Output: 255
 print(hexToDec("G1"))     # Output: None (invalid character 'G')
 print(hexToDec("abcd"))   # Output: 43981
+
+
+
+# Second Method:
+
+def hexToDec(hexNum):
+    for char in hexNum:
+        if char not in hexNumbers:
+            return None
+        
+    if len(hexNum) == 3:
+        return hexNumbers(hexNum[0], 256
