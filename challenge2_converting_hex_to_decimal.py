@@ -44,3 +44,22 @@ def hexToDec(hexNum):
 
     if len(hexNum) == 1:
         return hexNumbers[hexNum[0]] 
+    
+
+
+
+# Another Method:
+
+def hexToDec(hexNum):
+    for char in hexNum:
+        if char not in hexNumbers:
+            return None
+        
+    converted = 0
+    exponent = len(hexNum) - 1
+
+    for char in hexNum:
+        converted = converted + (hexNum[char] * (16 ** exponent))
+        exponent = exponent - 1
+
+    return converted
