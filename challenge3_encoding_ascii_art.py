@@ -12,7 +12,25 @@ def encodeString(stringVal):
                                a character and its consecutive count.
     """
 
+    if not stringVal:
+        return []
     
+    encoded = []
+    prev_char = stringVal[0]
+    count = 1
+
+    for char in stringVal[1:]:
+        if char == prev_char:
+            count+=1
+        else:
+            encoded.append((prev_char, count))
+            prev_char = char
+            count = 1
+
+    # Append the last run
+    encoded.append((prev_char, count))
+
+    return encoded
 
 
 def decodeString(encodedList):
