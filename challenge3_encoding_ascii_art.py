@@ -34,5 +34,22 @@ def encodeString(stringVal):
 
 
 def decodeString(encodedList):
-    # Your code goes here.
-    pass
+    """
+    Decodes a Run-Length Encoded (RLE) list back into the original string.
+
+    Parameters:
+        encodedList (List[Tuple[str, int]]): The RLE encoded list.
+
+    Returns:
+        str: The original ASCII art string.
+    """
+
+    if not encodedList:
+        return ""
+    
+    decoded = []
+
+    for char, count in encodedList:
+        decoded.append(char * count)
+
+    return ''.join(decoded)
