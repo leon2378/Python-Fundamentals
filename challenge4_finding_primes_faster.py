@@ -48,3 +48,21 @@ def allPrimesUpTo(num):
     print(primes)
     
     return primes
+
+
+
+# Second Method
+
+def allPrimesUpTo(num):
+    primes = [2]
+    for number in range(3, num):
+        sqrtNum = number**0.5
+        for factor in primes:
+            if number % factor == 0:
+                # Not prime
+                break
+            if factor > sqrtNum:
+                # Its prime
+                primes.append(number)
+                break
+    return primes
