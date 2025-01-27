@@ -41,3 +41,7 @@ class Shape:
 class Square(Shape):
     def printRow(self, i):
         print(self.printChar * self.width)
+
+class Triangle(Shape):
+    def printRow(self, i):
+        print(self.printChar * (i + 1))
