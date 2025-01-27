@@ -22,3 +22,5 @@ class Triangle(Shape):
     def printRow(self, i):
         # Print i + 1 printChars to form a right-angled triangle
         print(self.printChar * (i + 1))
+
+        
