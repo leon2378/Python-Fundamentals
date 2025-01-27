@@ -71,4 +71,4 @@ class Triangle(Shape):
     def printRow(self, i):
         triangleWidth = i * 2 + 1
         padding = int((self.width - triangleWidth)/2)
-        print(' '*padding + )
+        print(' '*padding + self.printChar * triangleWidth)
