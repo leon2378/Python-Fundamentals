@@ -23,4 +23,10 @@ class Triangle(Shape):
         # Print i + 1 printChars to form a right-angled triangle
         print(self.printChar * (i + 1))
 
-        
+
+
+
+class Shape:
+    width = 5
+    height = 5
+    printChar = '#'
