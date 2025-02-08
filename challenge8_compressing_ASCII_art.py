@@ -51,3 +51,8 @@ def decodeFile(filename):
     
     # Decoding the string is O(n)
     return decodeString(encodedList)
+
+
+
+# Second Method
+
