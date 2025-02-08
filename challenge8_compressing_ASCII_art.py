@@ -92,3 +92,4 @@ def decodeFile(filename):
     return decodeString(json.loads(data))
 
     
+# Third Method
