@@ -105,3 +105,6 @@ def encodeFile(filename, newFilename):
 def decodeFile(filename):
     with open(filename) as f:
         data = f.read()
+
+    pairs = data.split('~')
+    pairs = [p.split('|') for p in pairs]
