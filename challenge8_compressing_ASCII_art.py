@@ -97,6 +97,11 @@ def encodeFile(filename, newFilename):
     with open(filename) as f:
         data = encodeString(f.read())
 
+    data = [f'{char}|{count}' for char, count in data]
+
+    with open(newFilename, 'w') as f:
+        f.write('~'.join(data))
+
 def decodeFile(filename):
     with open(filename) as f:
         data = f.read()
