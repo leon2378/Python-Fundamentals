@@ -108,3 +108,5 @@ def decodeFile(filename):
 
     pairs = data.split('~')
     pairs = [p.split('|') for p in pairs]
+    pairs = [(p[0], int(p[1])) for p in pairs]
+    return decodeString(pairs)
