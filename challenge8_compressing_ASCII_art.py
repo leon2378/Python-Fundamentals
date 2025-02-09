@@ -86,7 +86,6 @@ def encodeFile(filename, newFilename):
         data = encodeString(f.read())
 
 def decodeFile(filename):
-    # Your code also goes here.
     with open(filename) as f:
         data = f.read()
     return decodeString(json.loads(data))
