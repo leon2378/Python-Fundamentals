@@ -81,7 +81,6 @@ def decodeString(encodedList):
 # The filename that will be passed to this function
 # is 10_04_challenge_art.txt
 def encodeFile(filename, newFilename):
-    # Your code goes here.
     with open(filename) as f:
         data = encodeString(f.read())
 
