@@ -56,7 +56,6 @@ def decodeFile(filename):
 
 # Second Method
 
-# Python code​​​​​​‌‌​​‌​‌​​​‌‌‌‌​​‌​‌​‌‌​‌‌ below
 import json 
 
 def encodeString(stringVal):
