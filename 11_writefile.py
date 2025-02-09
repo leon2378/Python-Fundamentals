@@ -6,3 +6,4 @@ parser.add_argument('--output')
 
 args = parser.parse_args()
 
+print(args.output)
