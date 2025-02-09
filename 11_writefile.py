@@ -7,4 +7,7 @@ parser.add_argument('--text', '-t', required=True, help='The text to write to th
 
 args = parser.parse_args()
 
-print(args.output)
+with open(args.output, 'w') as f:
+    f.write(args.text+'\n')
+
+print(f'Wrote "{args.text}" to file {args.output}')
