@@ -1,4 +1,4 @@
 import primes
 
 
-print()
+print(primes.isPrime(5))
